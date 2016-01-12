@@ -16,9 +16,11 @@ def restaurant_ratings(filename):
         restaurants_with_ratings[info[0]] = info[1]
 
     #sort dictionary alphabetically by key
+    #loop over sorted dictionary and print formatted output
     for restaurant in sorted(restaurants_with_ratings):
         print "%s is rated at %s." % (restaurant, restaurants_with_ratings[restaurant])
 
-    #loop over sorted dictionary and print formatted output
+    the_file.close()
+
 restaurant_ratings("scores.txt")
 
